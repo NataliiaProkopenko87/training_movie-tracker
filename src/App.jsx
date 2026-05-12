@@ -15,7 +15,9 @@ const deleteMovie = (id) => {
 
 const addMovie = (title) => {
     const updatedMovies = [ ...movies, 
-        { id: Math.random()*9999, title, watched: false } ];
+        { id: Math.round(Math.random()*9999), title, watched: false } ];
+
+        console.log(updatedMovies[updatedMovies.length - 1].id);
     setMovies(updatedMovies);
 };
 
